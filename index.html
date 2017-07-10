@@ -1,533 +1,353 @@
 <html>
+
 <head>
-<style media="screen">
-  body{
-    margin: 0px;
-  }
-    #top-header{
-      background-color: #f0f0f0;
-      width: 100%;
-      height: 130px;
-    }
-    #site-logo-img{
-      float:left;
-    }
-    #search{
-      float: right;
-    }
-    #dta-heading-bg{
-      clear: left;
-      background:
-      linear-gradient(
-        to top,
-        #fff, #f0f0f0
-        );
-        height: 200px;
-        line-height: 200px;
-        white-space: nowrap;
-    }
-    #dta-heading {
-      font-size: 5em;
-      font-family: sans-serif;
-      text-align: center;
-      margin-top: 0px;
-      /*text-transform: uppercase;*/
-    }
-    #dta1{
-      color: black;
-     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 2px;
-     -webkit-text-stroke-color: #347280;
-    }
-    #dta2{
-      background:
-      linear-gradient(
-      to right,
-      #4292A4, #000000
-    );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    #dta3{
-      color: #000000;
-      font-style: italic;
-    }
-    .abstract{
-      font-family: sans-serif;
-      text-align: center;
-      font-size: 2em;
-      padding-top: 2em;
-      margin: auto;
-      width: 75%;
-    }
-    #abs1{
-      color: black;
-     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 1px;
-     -webkit-text-stroke-color: #347280;
-    }
-    #abs2{
-      background:
-      linear-gradient(
-      to right,
-      #347280, #000000
-    );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    #abs3{
-      color: #000000;
-      font-style: italic;
-    }
-   #nav{
-      width: 1050px;
-      margin: auto;
-      -webkit-padding-start:100px;
-      padding-bottom: 1px;
-      /*border-bottom: 2px solid #f0f0f0;*/
-      border-bottom: 3px solid #5BCBE3;
-      position: relative;
-      top: -15px;
-    }
-    #nav li {
-      list-style-type: none;
-      display: inline;
-      padding-right: 3.5em;
-      font-family: sans-serif;
-      font-size: 1.25em;
-    }
-    #nav li a {
-      color: #616161;
-      text-decoration: none;
-      padding-bottom: 2px;
-    }
+    <style media="screen">
+        body {
+            margin: 0px;
+        }
+        #top-header {
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 130px;
+        }
+        #site-logo-img {
+            float: left;
+        }
+        #search {
+            float: right;
+        }
+        #dta-heading-bg {
+            clear: left;
+            background: linear-gradient( to top, #fff, #f0f0f0);
+            height: 200px;
+            line-height: 200px;
+            white-space: nowrap;
+        }
+        #dta-heading {
+            font-size: 5em;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 0px;
+            /*text-transform: uppercase;*/
+        }
+        #dta1 {
+            color: black;
+            -webkit-text-fill-color: transparent;
+            /* Will override color (regardless of order) */
 
-    #nav li a:hover, #nav li a:focus{
-      border-bottom: solid 3px #616161;
-      color: #000000;
-      outline: -webkit-focus-ring-color auto 0px;
-    }
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #347280;
+        }
+        #dta2 {
+            background: linear-gradient( to right, #4292A4, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #dta3 {
+            color: #000000;
+            font-style: italic;
+        }
+        .abstract {
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 2em;
+            padding-top: 2em;
+            margin: auto;
+            width: 75%;
+        }
+        #abs1 {
+            color: black;
+            -webkit-text-fill-color: transparent;
+            /* Will override color (regardless of order) */
 
-  </style>
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #347280;
+        }
+        #abs2 {
+            background: linear-gradient( to right, #347280, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #abs3 {
+            color: #000000;
+            font-style: italic;
+        }
+        #nav {
+            width: 1050px;
+            margin: auto;
+            -webkit-padding-start: 100px;
+            padding-bottom: 1px;
+            /*border-bottom: 2px solid #f0f0f0;*/
+
+            border-bottom: 3px solid #5BCBE3;
+            position: relative;
+            top: -15px;
+        }
+        #nav li {
+            list-style-type: none;
+            display: inline;
+            padding-right: 3.5em;
+            font-family: sans-serif;
+            font-size: 1.25em;
+        }
+        #nav li a {
+            color: #616161;
+            text-decoration: none;
+            padding-bottom: 2px;
+        }
+        #nav li a:hover,
+        #nav li a:focus {
+            border-bottom: solid 3px #616161;
+            color: #000000;
+            outline: -webkit-focus-ring-color auto 0px;
+        }
+    </style>
 </head>
+
 <body>
-  <header style="width:100%; box-sizing:border-box;">
-    <div id="top-header">
-      <img id="site-logo-img" class="" alt="Digital Transformation Agency logo" src="https://www.dta.gov.au/images/logo_dta_inline.png">
-      <form id="search" action="/search/" role="search" method="get">
-          <label for="site-search-text">Search dta.gov.au</label>
-          <div class="site-search-border">
-            <input type="search" name="q" id="site-search-text" title="Search" class="search-input">
-            <input class="submit" type="submit" value="Search">
-          </div>
-        </form>
-    </div>
-        <div id="dta-heading-bg">
-          <h1 id="dta-heading"><span id="dta1">Digital</span> <span id="dta2">Transformation</span> <span id="dta3">Agency</span></h1>
+    <header style="width:100%; box-sizing:border-box;">
+        <div id="top-header"> <img id="site-logo-img" class="" alt="Digital Transformation Agency logo" src="https://www.dta.gov.au/images/logo_dta_inline.png">
+            <form id="search" action="/search/" role="search" method="get">
+                <label for="site-search-text">Search dta.gov.au</label>
+                <div class="site-search-border">
+                    <input type="search" name="q" id="site-search-text" title="Search" class="search-input">
+                    <input class="submit" type="submit" value="Search"> </div>
+            </form>
         </div>
+        <div id="dta-heading-bg">
+            <h1 id="dta-heading"><span id="dta1">Digital</span> <span id="dta2">Transformation</span> <span id="dta3">Agency</span></h1> </div>
         <ul id="nav">
-            <li><a href="/what-we-do/">What we do</a></li>
-            <li><a href="/who-we-are/">Who we are</a></li>
-            <li><a href="/standard/">Digital Service Standard</a></li>
-            <li><a href="/news/">News</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/who-we-are/corporate/jobs/">Jobs</a></li>
+            <li><a href="/what-we-do/">What we do</a> </li>
+            <li><a href="/who-we-are/">Who we are</a> </li>
+            <li><a href="/standard/">Digital Service Standard</a> </li>
+            <li><a href="/news/">News</a> </li>
+            <li><a href="/blog/">Blog</a> </li>
+            <li><a href="/who-we-are/corporate/jobs/">Jobs</a> </li>
         </ul>
-        <p class="abstract">The Digital Transformation Agency exists to make it easy for people to deal with government, by
-        helping government transform services to be <span id="abs1"><strong>simple</strong></span>, <span id="abs2"><strong>clear</strong></span> and <span id="abs3"><strong>fast</strong></span>.</p>
+        <p class="abstract">The Digital Transformation Agency exists to make it easy for people to deal with government, by helping government transform services to be <span id="abs1"><strong>simple</strong></span>, <span id="abs2"><strong>clear</strong></span> and <span id="abs3"><strong>fast</strong></span>.</p>
     </header>
     <section id="section-blog">
-    <h2 class="home-heading">Latest news and blog posts</h2>
-    <ul class="list-vertical--fourths">
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/blog/i-want-a-pony/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Pony-Thumb.png" alt="">
-
-        </figure>
-        <h3><span>‘I want a pony!’ – or the critical difference between user research and market research</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time>
-
-
-      <a href="/blog/">Blog</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/blog/which-box-is-best/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/whitegreyblack_thumb.png" alt="">
-
-        </figure>
-        <h3><span>Which box is best?</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-06-28 00:00:00 +1000">28 Jun 2017</time>
-
-
-      <a href="/blog/">Blog</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/blog/open-source-library/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Opensource_thumb.png" alt="">
-
-        </figure>
-        <h3><span>Open source collaborating</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-06-23 00:00:00 +1000">23 Jun 2017</time>
-
-
-      <a href="/blog/">Blog</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/blog/accessibility-and-the-dss/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Accessibility_thumb.png" alt="">
-
-        </figure>
-        <h3><span>Accessibility and the Digital Service Standard</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-06-22 00:00:00 +1000">22 Jun 2017</time>
-
-
-      <a href="/blog/">Blog</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/blog/building-smarter-communities/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/smartcities_thumb.png" alt="">
-
-        </figure>
-        <h3><span>Building smarter communities</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-05-31 00:00:00 +1000">31 May 2017</time>
-
-
-      <a href="/blog/">Blog</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/news/ceo-senate-estimate-opening-statement/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/CEO_sml.png" alt="">
-
-        </figure>
-        <h3><span>Opening statement for Budget Estimates: Chief Executive Officer</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-05-23 00:00:00 +1000">23 May 2017</time>
-
-
-      <a href="/news/">News</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/blog/parterning-to-deliver-better-government-services/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/rod-transformation-THUMB.jpg" alt="">
-
-        </figure>
-        <h3><span>Partnering to deliver better government services</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time>
-
-
-      <a href="/blog/">Blog</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-
-
-<li>
-  <article>
-    <div class="link">
-      <a class="list-item-link" href="/news/improvements-to-mygov/">
-        <figure>
-
-          <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/MyGov-laptop-user-THUMB-22-05-17-3.jpg" alt="">
-
-        </figure>
-        <h3><span>Agency partnership delivers myGov improvements</span></h3>
-      </a>
-    </div>
-    <div class="meta">
-      <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time>
-
-
-      <a href="/news/">News</a>
-
-
-
-    </div>
-
-
-  </article>
-</li>
-
-
-    </ul>
-    <p><a class="see-more" href="/news/">See more news</a></p>
-    <p><a class="see-more" href="/blog/">See more blog posts</a></p>
-  </section>
-  <section>
-    <h2 class="home-heading">Featured products</h2>
-    <ul class="list-vertical--thirds">
-
-      <li>
-        <article>
-          <div class="link">
-            <a href="/what-we-do/transformation-agenda/">
-              <h3><span>Digital transformation agenda</span></h3>
-            </a>
-          </div>
-          <p>Our vision for digital transformation starts with the needs of users — individuals, businesses, service providers and government agencies.</p>
-        </article>
-      </li>
-
-      <li>
-        <article>
-          <div class="link">
-            <a href="/what-we-do/platforms/marketplace/">
-              <h3><span>Digital Marketplace</span></h3>
-            </a>
-          </div>
-          <p>We are transforming how the Australian government buys digital services, making it easier for businesses of all sizes to access government contracts.</p>
-        </article>
-      </li>
-
-      <li>
-        <article>
-          <div class="link">
-            <a href="/what-we-do/policies-and-programs/digital-investment-management-office/">
-              <h3><span>Digital Investment Management Office</span></h3>
-            </a>
-          </div>
-          <p>We provide oversight of all significant investment in ICT and digital by the Australian Government.</p>
-        </article>
-      </li>
-
-    </ul>
-  </section>
-  <section class="leadership">
-      <h2 class="home-heading">Leadership</h2>
-      <ul class="list-horizontal">
-
-
-        <li>
-          <figure>
-            <img src="https://www.dta.gov.au/images/leadership-group/angus-taylor.jpg" alt="The Hon Angus Taylor MP">
-          </figure>
-          <article>
-            <h3>
+        <h2 class="home-heading">Latest news and blog posts</h2>
+        <ul class="list-vertical--fourths">
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/blog/i-want-a-pony/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Pony-Thumb.png" alt=""> </figure>
+                            <h3><span>‘I want a pony!’ – or the critical difference between user research and market research</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a href="/blog/">Blog</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/blog/which-box-is-best/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/whitegreyblack_thumb.png" alt=""> </figure>
+                            <h3><span>Which box is best?</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-06-28 00:00:00 +1000">28 Jun 2017</time> <a href="/blog/">Blog</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/blog/open-source-library/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Opensource_thumb.png" alt=""> </figure>
+                            <h3><span>Open source collaborating</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-06-23 00:00:00 +1000">23 Jun 2017</time> <a href="/blog/">Blog</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/blog/accessibility-and-the-dss/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Accessibility_thumb.png" alt=""> </figure>
+                            <h3><span>Accessibility and the Digital Service Standard</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-06-22 00:00:00 +1000">22 Jun 2017</time> <a href="/blog/">Blog</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/blog/building-smarter-communities/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/smartcities_thumb.png" alt=""> </figure>
+                            <h3><span>Building smarter communities</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-05-31 00:00:00 +1000">31 May 2017</time> <a href="/blog/">Blog</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/news/ceo-senate-estimate-opening-statement/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/CEO_sml.png" alt=""> </figure>
+                            <h3><span>Opening statement for Budget Estimates: Chief Executive Officer</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-05-23 00:00:00 +1000">23 May 2017</time> <a href="/news/">News</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/blog/parterning-to-deliver-better-government-services/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/rod-transformation-THUMB.jpg" alt=""> </figure>
+                            <h3><span>Partnering to deliver better government services</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a href="/blog/">Blog</a> </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a class="list-item-link" href="/news/improvements-to-mygov/">
+                            <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/MyGov-laptop-user-THUMB-22-05-17-3.jpg" alt=""> </figure>
+                            <h3><span>Agency partnership delivers myGov improvements</span></h3> </a>
+                    </div>
+                    <div class="meta">
+                        <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a href="/news/">News</a> </div>
+                </article>
+            </li>
+        </ul>
+        <p><a class="see-more" href="/news/">See more news</a> </p>
+        <p><a class="see-more" href="/blog/">See more blog posts</a> </p>
+    </section>
+    <section>
+        <h2 class="home-heading">Featured products</h2>
+        <ul class="list-vertical--thirds">
+            <li>
+                <article>
+                    <div class="link">
+                        <a href="/what-we-do/transformation-agenda/">
+                            <h3><span>Digital transformation agenda</span></h3> </a>
+                    </div>
+                    <p>Our vision for digital transformation starts with the needs of users — individuals, businesses, service providers and government agencies.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a href="/what-we-do/platforms/marketplace/">
+                            <h3><span>Digital Marketplace</span></h3> </a>
+                    </div>
+                    <p>We are transforming how the Australian government buys digital services, making it easier for businesses of all sizes to access government contracts.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="link">
+                        <a href="/what-we-do/policies-and-programs/digital-investment-management-office/">
+                            <h3><span>Digital Investment Management Office</span></h3> </a>
+                    </div>
+                    <p>We provide oversight of all significant investment in ICT and digital by the Australian Government.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <section class="leadership">
+        <h2 class="home-heading">Leadership</h2>
+        <ul class="list-horizontal">
+            <li>
+                <figure> <img src="https://www.dta.gov.au/images/leadership-group/angus-taylor.jpg" alt="The Hon Angus Taylor MP"> </figure>
+                <article>
+                    <h3>
               The Hon Angus Taylor MP
             </h3>
-            <div class="meta">
-              <p>Assistant Minister for Cities and Digital Transformation</p>
-              <p><a href="http://ministers.dpmc.gov.au/taylor">Read more about Angus Taylor</a></p>
-
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <figure>
-            <img src="https://www.dta.gov.au/images/leadership-group/Gavin_Slater_bio_150v2.jpg" alt="Gavin Slater">
-          </figure>
-          <article>
-            <h3>
+                    <div class="meta">
+                        <p>Assistant Minister for Cities and Digital Transformation</p>
+                        <p><a href="http://ministers.dpmc.gov.au/taylor">Read more about Angus Taylor</a> </p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <figure> <img src="https://www.dta.gov.au/images/leadership-group/Gavin_Slater_bio_150v2.jpg" alt="Gavin Slater"> </figure>
+                <article>
+                    <h3>
               Gavin Slater
             </h3>
-            <div class="meta">
-              <p>Chief Executive Officer</p>
-              <p><a href="/who-we-are/leadership/#gavin-slater----chief-executive-officer">Read more about Gavin Slater</a></p>
-
-            </div>
-          </article>
-        </li>
-
-      </ul>
+                    <div class="meta">
+                        <p>Chief Executive Officer</p>
+                        <p><a href="/who-we-are/leadership/#gavin-slater----chief-executive-officer">Read more about Gavin Slater</a> </p>
+                    </div>
+                </article>
+            </li>
+        </ul>
     </section>
     <section class="social-media">
-      <h2 class="home-heading">Social media</h2>
-      <ul class="social-media-links">
-        <li><a class="twitter" href="https://twitter.com/DTA">Twitter</a></li>
-        <li><a class="facebook" href="https://www.facebook.com/DigitalTransformationAgency">Facebook</a></li>
-        <li><a class="linkedin" href="https://www.linkedin.com/company/digital-transformation-office">LinkedIn</a></li>
-        <li><a class="youtube" href="https://www.youtube.com/channel/UCmDkFN3UlK2wSKDQQhd-Y-A">YouTube</a></li>
-        <li><a class="slideshare" href="http://www.slideshare.net/DTO-slides">Slideshare</a></li>
-      </ul>
+        <h2 class="home-heading">Social media</h2>
+        <ul class="social-media-links">
+            <li><a class="twitter" href="https://twitter.com/DTA">Twitter</a> </li>
+            <li><a class="facebook" href="https://www.facebook.com/DigitalTransformationAgency">Facebook</a> </li>
+            <li><a class="linkedin" href="https://www.linkedin.com/company/digital-transformation-office">LinkedIn</a> </li>
+            <li><a class="youtube" href="https://www.youtube.com/channel/UCmDkFN3UlK2wSKDQQhd-Y-A">YouTube</a> </li>
+            <li><a class="slideshare" href="http://www.slideshare.net/DTO-slides">Slideshare</a> </li>
+        </ul>
     </section>
     <footer role="contentinfo">
-  <div class="wrapper">
+        <div class="wrapper">
+            <section class="footer-top">
+                <nav>
+                    <ul>
+                        <li>
+                            <h2>Resources</h2> </li>
+                        <li><a href="/what-we-do/">What we do</a> </li>
+                        <li><a href="/standard/">Digital Service Standard</a> </li>
+                        <li><a href="/standard/design-guides/">Design guides</a> </li>
+                        <li><a href="/blog/">Blog</a> </li>
+                        <li><a href="/news/">News</a> </li>
+                        <li><a href="https://github.com/AusDTO" class="github">github.com/AusDTO</a> </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h2>About</h2> </li>
+                        <li><a href="/who-we-are/">Who we are</a> </li>
+                        <li><a href="/who-we-are/corporate/plan/">Corporate plan</a> </li>
+                        <li><a href="/contact/">Contact us</a> </li>
+                        <li><a href="/who-we-are/corporate/jobs/">Jobs</a> </li>
+                        <li><a href="/what-we-do/budget/">Budget measures</a> </li>
+                        <li><a href="/who-we-are/corporate/freedom-of-information/">Freedom of Information</a> </li>
+                        <li><a href="/who-we-are/corporate/contracts/">List of contracts</a> </li>
+                        <li><a href="/who-we-are/corporate/annual-report/">Annual Report</a> </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h2>Using dta.gov.au</h2> </li>
+                        <li><a href="/search/">Search</a> </li>
+                        <li><a href="/accessibility">Accessibility</a> </li>
+                        <li><a href="/copyright">Copyright</a> </li>
+                        <li><a href="/privacy-statement/">Privacy</a> </li>
+                        <li><a href="/disclaimer/">Disclaimer</a> </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="signup">
+                                <h2>Sign-up for updates</h2> <a role="button" href="/signup">Sign-up</a> </div>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <div class="footer-logo"> <img alt="Australian Government Coat of Arms" src="https://www.dta.gov.au/images/coat-of-arms.png"> </div>
+                <div class="footer-links">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Back to top ↑</a> </li>
+                        </ul>
+                    </nav>
+                    <p>© Commonwealth of Australia</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
 
-    <section class="footer-top">
-      <nav>
-        <ul>
-          <li><h2>Resources</h2></li>
-          <li><a href="/what-we-do/">What we do</a></li>
-          <li><a href="/standard/">Digital Service Standard</a></li>
-          <li><a href="/standard/design-guides/">Design guides</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/news/">News</a></li>
-          <li><a href="https://github.com/AusDTO" class="github">github.com/AusDTO</a></li>
-        </ul>
-        <ul>
-          <li><h2>About</h2></li>
-          <li><a href="/who-we-are/">Who we are</a></li>
-          <li><a href="/who-we-are/corporate/plan/">Corporate plan</a></li>
-          <li><a href="/contact/">Contact us</a></li>
-          <li><a href="/who-we-are/corporate/jobs/">Jobs</a></li>
-          <li><a href="/what-we-do/budget/">Budget measures</a></li>
-          <li><a href="/who-we-are/corporate/freedom-of-information/">Freedom of Information</a></li>
-          <li><a href="/who-we-are/corporate/contracts/">List of contracts</a></li>
-          <li><a href="/who-we-are/corporate/annual-report/">Annual Report</a></li>
-        </ul>
-        <ul>
-          <li><h2>Using dta.gov.au</h2></li>
-          <li><a href="/search/">Search</a></li>
-          <li><a href="/accessibility">Accessibility</a></li>
-          <li><a href="/copyright">Copyright</a></li>
-          <li><a href="/privacy-statement/">Privacy</a></li>
-          <li><a href="/disclaimer/">Disclaimer</a></li>
-        </ul>
-        <ul>
-
-          <li>
-
-<div class="signup">
-  <h2>Sign-up for updates</h2>
-  <a role="button" href="/signup">Sign-up</a>
-</div>
-
-          </li>
-
-        </ul>
-      </nav>
-    </section>
-
-    <section>
-      <div class="footer-logo">
-        <img alt="Australian Government Coat of Arms" src="https://www.dta.gov.au/images/coat-of-arms.png">
-      </div>
-      <div class="footer-links">
-        <nav>
-          <ul>
-            <li><a href="#">Back to top ↑</a></li>
-          </ul>
-        </nav>
-
-        <p>© Commonwealth of Australia</p>
-      </div>
-    </section>
-
-  </div>
-</footer>
-  </body>
 </html>
