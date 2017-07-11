@@ -1,7 +1,12 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <style media="screen">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>DTA Homepage Project</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/2.0.1/css/frow.min.css">
+    <style  >
         body {
             margin: 0px;
         }
@@ -79,7 +84,7 @@
             padding-bottom: 1px;
             /*border-bottom: 2px solid #f0f0f0;*/
 
-            border-bottom: 3px solid #5BCBE3;
+            /*border-bottom: 3px solid #5BCBE3;*/
             position: relative;
             top: -15px;
         }
@@ -94,12 +99,49 @@
             color: #616161;
             text-decoration: none;
             padding-bottom: 2px;
+            border-bottom: solid 1px #397D8C;
         }
         #nav li a:hover,
         #nav li a:focus {
-            border-bottom: solid 3px #616161;
+            border-bottom: solid 6px #5bcbe3;
             color: #000000;
             outline: -webkit-focus-ring-color auto 0px;
+        }
+        #navline {
+          width: 85%;
+          height: 6px;
+          background: linear-gradient( to right, #4292A4, #000000);
+          margin: auto;
+          position: relative;
+          top: -60px;
+        }
+
+        h3, .meta {
+          width: 270px;
+          font-family: sans-serif;
+        }
+
+        .meta {
+          margin-bottom: 2em;
+        }
+
+        img {
+          max-width: 100%;
+        }
+        #section-blog {
+          padding: 105px;
+          padding-top: 50px;
+        }
+
+          #section-blog h2 {
+          font-size: 2.5rem;
+          font-weight: 400;
+          font-family: sans-serif;
+          margin-top: 0px;
+        }
+
+        figure {
+          margin: 0px;
         }
     </style>
 </head>
@@ -124,23 +166,24 @@
             <li><a href="/blog/">Blog</a> </li>
             <li><a href="/who-we-are/corporate/jobs/">Jobs</a> </li>
         </ul>
+        <div id="navline"></div>
         <p class="abstract">The Digital Transformation Agency exists to make it easy for people to deal with government, by helping government transform services to be <span id="abs1"><strong>simple</strong></span>, <span id="abs2"><strong>clear</strong></span> and <span id="abs3"><strong>fast</strong></span>.</p>
     </header>
     <section id="section-blog">
         <h2 class="home-heading">Latest news and blog posts</h2>
-        <ul class="list-vertical--fourths">
-            <li>
+        <ul class="frow gutters">
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/i-want-a-pony/">
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Pony-Thumb.png" alt=""> </figure>
-                            <h3><span>‘I want a pony!’ – or the critical difference between user research and market research</span></h3> </a>
+                            <h3><span>'I want a pony!’ – or the critical difference between user research and market research</span></h3> </a>
                     </div>
                     <div class="meta">
                         <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/which-box-is-best/">
@@ -151,7 +194,7 @@
                         <time datetime="2017-06-28 00:00:00 +1000">28 Jun 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/open-source-library/">
@@ -162,7 +205,7 @@
                         <time datetime="2017-06-23 00:00:00 +1000">23 Jun 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/accessibility-and-the-dss/">
@@ -173,7 +216,7 @@
                         <time datetime="2017-06-22 00:00:00 +1000">22 Jun 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/building-smarter-communities/">
@@ -184,7 +227,7 @@
                         <time datetime="2017-05-31 00:00:00 +1000">31 May 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/news/ceo-senate-estimate-opening-statement/">
@@ -195,7 +238,7 @@
                         <time datetime="2017-05-23 00:00:00 +1000">23 May 2017</time> <a href="/news/">News</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/parterning-to-deliver-better-government-services/">
@@ -206,7 +249,7 @@
                         <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li>
+            <li class="col-md-1-4">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/news/improvements-to-mygov/">
