@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>DTA Homepage Project</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/2.0.1/css/frow.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/2.0.1/css/frow.min.css">-->
     <style>
         body {
             margin: 0px;
@@ -29,12 +28,14 @@
             height: 200px;
             line-height: 200px;
             white-space: nowrap;
+            width: 1150px;
+            margin: auto;
         }
         #dta-heading {
             font-size: 5em;
             font-family: sans-serif;
-            text-align: center;
-            margin-top: 0px;
+            /*text-align: center;*/
+            margin: 0px;
             /*text-transform: uppercase;*/
         }
         #dta1 {
@@ -112,7 +113,7 @@
           background: linear-gradient( to right, #4292A4, #000000);
           /*margin-left: 100px;*/
           position: relative;
-          top: -85px;
+          top: -20px;
         }
 
         h3, .meta {
@@ -147,6 +148,13 @@
         .logo {
           filter: invert();
         }
+
+        .container{
+          list-style: none;
+          display: grid;
+          grid-template-columns: 250px 250px 250px 250px;
+          grid-column-gap:10px;          
+        }
     </style>
 </head>
 
@@ -177,19 +185,21 @@
     </header>
     <section id="section-blog">
         <h2 class="home-heading">Latest news and blog posts</h2>
-        <ul class="frow gutters">
-            <li class="col-md-1-4">
+        <ul class="container">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/i-want-a-pony/">
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Pony-Thumb.png" alt=""> </figure>
                             <h3><span>'I want a pony!’ – or the critical difference between user research and market research</span></h3> </a>
-                    </div>
                     <div class="meta">
-                        <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a href="/blog/">Blog</a> </div>
+                        <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a href="/blog/">Blog</a>
+                    </div>
+                  </div>
+
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/which-box-is-best/">
@@ -200,7 +210,7 @@
                         <time datetime="2017-06-28 00:00:00 +1000">28 Jun 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/open-source-library/">
@@ -211,7 +221,7 @@
                         <time datetime="2017-06-23 00:00:00 +1000">23 Jun 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/accessibility-and-the-dss/">
@@ -222,7 +232,7 @@
                         <time datetime="2017-06-22 00:00:00 +1000">22 Jun 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/building-smarter-communities/">
@@ -233,7 +243,7 @@
                         <time datetime="2017-05-31 00:00:00 +1000">31 May 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/news/ceo-senate-estimate-opening-statement/">
@@ -244,7 +254,7 @@
                         <time datetime="2017-05-23 00:00:00 +1000">23 May 2017</time> <a href="/news/">News</a> </div>
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/blog/parterning-to-deliver-better-government-services/">
@@ -255,7 +265,7 @@
                         <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a href="/blog/">Blog</a> </div>
                 </article>
             </li>
-            <li class="col-md-1-4">
+            <li class="">
                 <article>
                     <div class="link">
                         <a class="list-item-link" href="/news/improvements-to-mygov/">
