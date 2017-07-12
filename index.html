@@ -12,7 +12,8 @@
         }
         #top-header {
             /*background-color: #f0f0f0;*/
-            background: linear-gradient( to right, #4292A4, #000000);
+            /*background: linear-gradient( to right, #4292A4, #000000);*/
+            background: linear-gradient(to right, #4292a4 0%, #4292a4 23%, #000000 100%);
             width: 100%;
             height: 130px;
         }
@@ -24,7 +25,7 @@
         }
         #dta-heading-bg {
             clear: left;
-            background: linear-gradient( to top, #fff, #f0f0f0);
+            /*background: linear-gradient( to top, #fff, #f0f0f0);*/
             height: 200px;
             line-height: 200px;
             white-space: nowrap;
@@ -37,12 +38,10 @@
             /*text-transform: uppercase;*/
         }
         #dta1 {
-            color: black;
-            -webkit-text-fill-color: transparent;
-            /* Will override color (regardless of order) */
-
+            color: #4292a4;
+            /*-webkit-text-fill-color: transparent;
             -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: #347280;
+            -webkit-text-stroke-color: #347280;*/
         }
         #dta2 {
             background: linear-gradient( to right, #4292A4, #000000);
@@ -51,36 +50,34 @@
         }
         #dta3 {
             color: #000000;
-            font-style: italic;
+            /*font-style: italic;*/
         }
         .abstract {
             font-family: sans-serif;
-            text-align: center;
+            /*text-align: center;*/
             font-size: 2em;
             padding-top: 2em;
             margin: auto;
             width: 75%;
         }
-        #abs1 {
-            color: black;
-            -webkit-text-fill-color: transparent;
-            /* Will override color (regardless of order) */
-
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: #347280;
-        }
+        /*#abs1 {
+            color: #397D8C;*/
+            /*-webkit-text-fill-color: transparent;
+        /*    -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #347280;*/
+        /*}
         #abs2 {
-            background: linear-gradient( to right, #347280, #000000);
+            background: linear-gradient( to right, #397D8C, #000000);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         #abs3 {
             color: #000000;
             font-style: italic;
-        }
+        }*/
         #nav {
-            width: 1050px;
-            margin: auto;
+            /*width: 1050px;
+            margin: auto;*/
             -webkit-padding-start: 100px;
             padding-bottom: 1px;
             /*border-bottom: 2px solid #f0f0f0;*/
@@ -109,12 +106,13 @@
             outline: -webkit-focus-ring-color auto 0px;
         }
         #navline {
-          width: 85%;
+          width: 1150px;
+          margin: auto;
           height: 6px;
           background: linear-gradient( to right, #4292A4, #000000);
-          margin: auto;
+          /*margin-left: 100px;*/
           position: relative;
-          top: -60px;
+          top: -85px;
         }
 
         h3, .meta {
@@ -145,12 +143,16 @@
         figure {
           margin: 0px;
         }
+
+        .logo {
+          filter: invert();
+        }
     </style>
 </head>
 
 <body>
     <header style="width:100%; box-sizing:border-box;">
-        <div id="top-header"> <img id="site-logo-img" class="" alt="Digital Transformation Agency logo" src="https://www.dta.gov.au/images/logo_dta_inline.png">
+        <div id="top-header"> <img id="site-logo-img" class="logo" alt="Digital Transformation Agency logo" src="https://www.dta.gov.au/images/logo_dta_inline.png">
             <form id="search" action="/search/" role="search" method="get">
                 <label for="site-search-text">Search dta.gov.au</label>
                 <div class="site-search-border">
@@ -160,7 +162,9 @@
             </form>
         </div>
         <div id="dta-heading-bg">
-            <h1 id="dta-heading"><span id="dta1">Digital</span> <span id="dta2">Transformation</span> <span id="dta3">Agency</span></h1> </div>
+            <h1 id="dta-heading"><span id="dta1">Digital</span> <span id="dta2">Transformation</span> <span id="dta3">Agency</span></h1>
+            <div id="navline"></div>
+        </div>
         <ul id="nav">
             <li><a href="/what-we-do/">What we do</a> </li>
             <li><a href="/who-we-are/">Who we are</a> </li>
@@ -169,7 +173,6 @@
             <li><a href="/blog/">Blog</a> </li>
             <li><a href="/who-we-are/corporate/jobs/">Jobs</a> </li>
         </ul>
-        <div id="navline"></div>
         <p class="abstract">The Digital Transformation Agency exists to make it easy for people to deal with government, by helping government transform services to be <span id="abs1"><strong>simple</strong></span>, <span id="abs2"><strong>clear</strong></span> and <span id="abs3"><strong>fast</strong></span>.</p>
     </header>
     <section id="section-blog">
