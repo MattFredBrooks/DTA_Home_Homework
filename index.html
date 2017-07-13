@@ -5,7 +5,11 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!--<link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/2.0.1/css/frow.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
+        label {
+          visibility: hidden;
+        }
         body {
             margin: 0px;
         }
@@ -158,19 +162,88 @@
         }
         .link{
           position: relative;
+          width: 248px;
+          height: 350px;
+          border: solid 1px lightgrey;
+          box-sizing: border-box;
         }
+
+        .link h3 {
+          padding:10px;
+        }
+
+        .link time {
+          padding:10px;
+        }
+
         .blogover{
-          background-color: #1c3e4a;
-          opacity: 0.75;
-          width: 250px;
+          /*background-color: #397D8C;*/
+          box-sizing: border-box;
+          background-color: #4292A4;
+          width: 246px;
           height: 350px;
           position: absolute;
           top: 0px;
+          padding: 10px;
+        }
+
+        .blogover h3 {
+          text-decoration: underline;
+          padding: 5px;
+          font-family: sans-serif;
+          color: #fff;
+        }
+
+        .blogover p {
+          padding: 5px;
+          font-family: sans-serif;
+          color: #fff;
+          padding-top: 20px;
+        }
+
+        .blogover span {
+          text-decoration: underline;
+          padding: 5px;
+        }
+
+        .blogover time {
+          padding: 5px;
+          font-family: sans-serif;
+          color: #fff;
+        }
+
+        .blogover a {
+          text-decoration: underline;
+          padding: 5px;
+          font-family: sans-serif;
+          color: #fff;
+        }
+        .blogover h3:hover {
+          color: black;
+          background-color: lightblue;
+        }
+        .blogover span:hover{
+          color: black;
+          background-color: lightblue;
+        }
+        .blogover a:hover {
+          color: black;
+          background-color: lightblue;
         }
         .bloglist{
           height: 350px;
         }
+        #search{
+          position: relative;
+          top: 45px;
+          right: 20px;
+        }
+        .see-more{
+          font-family: sans-serif;
+          text-decoration: underline;
+        }
     </style>
+
 </head>
 
 <body>
@@ -189,12 +262,12 @@
             <div id="navline"></div>
         </div>
         <ul id="nav">
-            <li><a href="#">What we do</a> </li>
-            <li><a href="#">Who we are</a> </li>
-            <li><a href="#">Digital Service Standard</a> </li>
-            <li><a href="#">News</a> </li>
-            <li><a href="#">Blog</a> </li>
-            <li><a href="#">Jobs</a> </li>
+            <li><a >What we do</a> </li>
+            <li><a >Who we are</a> </li>
+            <li><a >Digital Service Standard</a> </li>
+            <li><a >News</a> </li>
+            <li><a >Blog</a> </li>
+            <li><a >Jobs</a> </li>
         </ul>
         <p class="abstract">The Digital Transformation Agency exists to make it easy for people to deal with government, by helping government transform services to be <span id="abs1"><strong>simple</strong></span>, <span id="abs2"><strong>clear</strong></span> and <span id="abs3"><strong>fast</strong></span>.</p>
     </header>
@@ -203,14 +276,19 @@
         <ul class="container">
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link1">
+                        <a class="list-item-link">
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Pony-Thumb.png" alt=""> </figure>
                             <h3><span>'I want a pony!’ – or the critical difference between user research and market research</span></h3> </a>
                     <div class="meta">
-                        <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a href="#">Blog</a>
+                        <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a>Blog</a>
                     </div>
-                    <div class="blogover"></div>
+                    <div class="blogover" id="blog1">
+                      <h3>'I want a pony!’ – or the critical difference between user research and market research</h3>
+                      <time datetime="2017-07-03 00:00:00 +1000">3 Jul 2017</time> <a>Blog</a>
+                      <p>Leisa Reichelt</p>
+                      <p><strong>Tags:</strong> <span>Digital Transformation</span></p>
+                    </div>
                   </div>
 
                 </article>
@@ -218,14 +296,19 @@
             </li>
             <li class="bloglist">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link2">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/whitegreyblack_thumb.png" alt=""> </figure>
                             <h3><span>Which box is best?</span></h3> </a>
                     <div class="meta">
-                        <time datetime="2017-06-28 00:00:00 +1000">28 Jun 2017</time> <a href="#">Blog</a>
+                        <time datetime="2017-06-28 00:00:00 +1000">28 Jun 2017</time> <a >Blog</a>
                     </div>
-                    <div class="blogover"></div>
+                    <div class="blogover" id="blog2">
+                      <h3>Which box is best?</h3>
+                      <time datetime="2017-07-03 00:00:00 +1000">28 Jun 2017</time> <a>Blog</a>
+                      <p>Stephen Bradshaw</p>
+                      <p><strong>Tags:</strong> <span>Technology</span></p>
+                    </div>
                   </div>
 
                 </article>
@@ -233,84 +316,112 @@
             </li>
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link3">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Opensource_thumb.png" alt=""> </figure>
                             <h3><span>Open source collaborating</span></h3> </a>
 
                     <div class="meta">
-                        <time datetime="2017-06-23 00:00:00 +1000">23 Jun 2017</time> <a href="#">Blog</a> </div>
-                      <div class="blogover"></div>
+                        <time datetime="2017-06-23 00:00:00 +1000">23 Jun 2017</time> <a >Blog</a> </div>
+                      <div class="blogover" id="blog3">
+                        <h3>Open source collaborating</h3>
+                        <time datetime="2017-07-03 00:00:00 +1000">23 Jun 2017</time> <a>Blog</a>
+                        <p>Catherine Thompson</p>
+                        <p><strong>Tags:</strong> <span>Digital Marketplace</span></p>
+                      </div>
                     </div>
                 </article>
 
             </li>
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link4">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/Accessibility_thumb.png" alt=""> </figure>
                             <h3><span>Accessibility and the Digital Service Standard</span></h3> </a>
 
                     <div class="meta">
-                        <time datetime="2017-06-22 00:00:00 +1000">22 Jun 2017</time> <a href="#">Blog</a> </div>
-                      <div class="blogover"></div>
+                        <time datetime="2017-06-22 00:00:00 +1000">22 Jun 2017</time> <a >Blog</a> </div>
+                      <div class="blogover" id="blog4">
+                        <h3>Accessibility and the Digital Service Standard</h3>
+                        <time datetime="2017-07-03 00:00:00 +1000">22 Jun 2017</time> <a>Blog</a>
+                        <p>Andrew Arch</p>
+                        <p><strong>Tags:</strong> <span>Digital Transformation</span></p>
+                      </div>
                     </div>
                 </article>
 
             </li>
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link5">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/smartcities_thumb.png" alt=""> </figure>
                             <h3><span>Building smarter communities</span></h3> </a>
 
                     <div class="meta">
-                        <time datetime="2017-05-31 00:00:00 +1000">31 May 2017</time> <a href="#">Blog</a> </div>
-                      <div class="blogover"></div>
+                        <time datetime="2017-05-31 00:00:00 +1000">31 May 2017</time> <a >Blog</a> </div>
+                      <div class="blogover" id="blog5">
+                        <h3>Building smarter communities</h3>
+                        <time datetime="2017-07-03 00:00:00 +1000">31 May 2017</time> <a>Blog</a>
+                        <p>Catherine Thompson</p>
+                        <p><strong>Tags:</strong> <span>Digital Marketplace</span></p>
+                      </div>
                     </div>
                 </article>
 
             </li>
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link6">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/CEO_sml.png" alt=""> </figure>
                             <h3><span>Opening statement for Budget Estimates: Chief Executive Officer</span></h3> </a>
-
                     <div class="meta">
-                        <time datetime="2017-05-23 00:00:00 +1000">23 May 2017</time> <a href="#">News</a> </div>
-                      <div class="blogover"></div>
+                        <time datetime="2017-05-23 00:00:00 +1000">23 May 2017</time> <a >News</a> </div>
+                      <div class="blogover" id="blog6">
+                        <h3>Opening statement for Budget Estimates: Chief Executive Officer</h3>
+                        <time datetime="2017-07-03 00:00:00 +1000">23 May 2017</time> <a>Blog</a>
+                        <p>Media</p>
+                        <p><strong>Tags:</strong> <span>DTA News</span></p>
+                      </div>
                     </div>
                 </article>
 
             </li>
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link7">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/rod-transformation-THUMB.jpg" alt=""> </figure>
                             <h3><span>Partnering to deliver better government services</span></h3> </a>
-
                     <div class="meta">
-                        <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a href="#">Blog</a> </div>
-                      <div class="blogover"></div>
+                        <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a >Blog</a> </div>
+                      <div class="blogover" id="blog7">
+                        <h3>Partnering to deliver better government services</h3>
+                        <time datetime="2017-07-03 00:00:00 +1000">22 May 2017</time> <a>Blog</a>
+                        <p>Ashley Hutton</p>
+                        <p><strong>Tags:</strong> <span>Digital Transformation</span></p>
+                      </div>
                     </div>
                 </article>
 
             </li>
             <li class="">
                 <article>
-                    <div class="link">
-                        <a class="list-item-link" href="#">
+                    <div class="link" id="link8">
+                        <a class="list-item-link" >
                             <figure> <img class="blog-thumbnail" src="https://www.dta.gov.au/images/blog-thumbnails/MyGov-laptop-user-THUMB-22-05-17-3.jpg" alt=""> </figure>
                             <h3><span>Agency partnership delivers myGov improvements</span></h3> </a>
 
                     <div class="meta">
-                        <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a href="#">News</a> </div>
-                      <div class="blogover"></div>
+                        <time datetime="2017-05-22 00:00:00 +1000">22 May 2017</time> <a >News</a> </div>
+                      <div class="blogover" id="blog8">
+                        <h3>Agency partnership delivers myGov improvements</h3>
+                        <time datetime="2017-07-03 00:00:00 +1000">22 May 2017</time> <a>Blog</a>
+                        <p>Media</p>
+                        <p><strong>Tags:</strong> <span>DTA News</span></p>
+                      </div>
                     </div>
                 </article>
 
@@ -319,133 +430,45 @@
         <p><a class="see-more" href="#">See more news</a> </p>
         <p><a class="see-more" href="#">See more blog posts</a> </p>
     </section>
-    <section>
-        <h2 class="home-heading">Featured products</h2>
-        <ul class="list-vertical--thirds">
-            <li>
-                <article>
-                    <div class="link">
-                        <a href="#">
-                            <h3><span>Digital transformation agenda</span></h3> </a>
-                    </div>
-                    <p>Our vision for digital transformation starts with the needs of users — individuals, businesses, service providers and government agencies.</p>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <div class="link">
-                        <a href="#">
-                            <h3><span>Digital Marketplace</span></h3> </a>
-                    </div>
-                    <p>We are transforming how the Australian government buys digital services, making it easier for businesses of all sizes to access government contracts.</p>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <div class="link">
-                        <a href="#">
-                            <h3><span>Digital Investment Management Office</span></h3> </a>
-                    </div>
-                    <p>We provide oversight of all significant investment in ICT and digital by the Australian Government.</p>
-                </article>
-            </li>
-        </ul>
-    </section>
-    <section class="leadership">
-        <h2 class="home-heading">Leadership</h2>
-        <ul class="list-horizontal">
-            <li>
-                <figure> <img src="https://www.dta.gov.au/images/leadership-group/angus-taylor.jpg" alt="The Hon Angus Taylor MP"> </figure>
-                <article>
-                    <h3>
-              The Hon Angus Taylor MP
-            </h3>
-                    <div class="meta">
-                        <p>Assistant Minister for Cities and Digital Transformation</p>
-                        <p><a href="#">Read more about Angus Taylor</a> </p>
-                    </div>
-                </article>
-            </li>
-            <li>
-                <figure> <img src="https://www.dta.gov.au/images/leadership-group/Gavin_Slater_bio_150v2.jpg" alt="Gavin Slater"> </figure>
-                <article>
-                    <h3>
-              Gavin Slater
-            </h3>
-                    <div class="meta">
-                        <p>Chief Executive Officer</p>
-                        <p><a href="#">Read more about Gavin Slater</a> </p>
-                    </div>
-                </article>
-            </li>
-        </ul>
-    </section>
-    <section class="social-media">
-        <h2 class="home-heading">Social media</h2>
-        <ul class="social-media-links">
-            <li><a class="twitter" href="https://twitter.com/DTA">Twitter</a> </li>
-            <li><a class="facebook" href="https://www.facebook.com/DigitalTransformationAgency">Facebook</a> </li>
-            <li><a class="linkedin" href="https://www.linkedin.com/company/digital-transformation-office">LinkedIn</a> </li>
-            <li><a class="youtube" href="https://www.youtube.com/channel/UCmDkFN3UlK2wSKDQQhd-Y-A">YouTube</a> </li>
-            <li><a class="slideshare" href="http://www.slideshare.net/DTO-slides">Slideshare</a> </li>
-        </ul>
-    </section>
-    <footer role="contentinfo">
-        <div class="wrapper">
-            <section class="footer-top">
-                <nav>
-                    <ul>
-                        <li>
-                            <h2>Resources</h2> </li>
-                        <li><a href="#">What we do</a> </li>
-                        <li><a href="#">Digital Service Standard</a> </li>
-                        <li><a href="#">Design guides</a> </li>
-                        <li><a href="#">Blog</a> </li>
-                        <li><a href="#">News</a> </li>
-                        <li><a href="https://github.com/AusDTO" class="github">github.com/AusDTO</a> </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h2>About</h2> </li>
-                        <li><a href="#">Who we are</a> </li>
-                        <li><a href="#">Corporate plan</a> </li>
-                        <li><a href="#">Contact us</a> </li>
-                        <li><a href="#">Jobs</a> </li>
-                        <li><a href="#">Budget measures</a> </li>
-                        <li><a href="#">Freedom of Information</a> </li>
-                        <li><a href="#">List of contracts</a> </li>
-                        <li><a href="#">Annual Report</a> </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h2>Using dta.gov.au</h2> </li>
-                        <li><a href="#">Search</a> </li>
-                        <li><a href="#">Accessibility</a> </li>
-                        <li><a href="#">Copyright</a> </li>
-                        <li><a href="#">Privacy</a> </li>
-                        <li><a href="#">Disclaimer</a> </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <div class="signup">
-                                <h2>Sign-up for updates</h2> <a role="button" href="#">Sign-up</a> </div>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-            <section>
-                <div class="footer-logo"> <img alt="Australian Government Coat of Arms" src="https://www.dta.gov.au/images/coat-of-arms.png"> </div>
-                <div class="footer-links">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Back to top ↑</a> </li>
-                        </ul>
-                    </nav>
-                    <p>© Commonwealth of Australia</p>
-                </div>
-            </section>
-        </div>
-    </footer>
-</body>
 
+</body>
+<script>
+      $("#blog1").hide();
+      $("#blog2").hide();
+      $("#blog3").hide();
+      $("#blog4").hide();
+      $("#blog5").hide();
+      $("#blog6").hide();
+      $("#blog7").hide();
+      $("#blog8").hide();
+
+    //$( "#link1" ).hover(function() {
+    //    $("#blog1").toggle();
+    //});
+
+    $( "#link1" ).hover(function() {
+        $( "#blog1" ).fadeToggle( "fast", "linear" );
+    });
+    $( "#link2" ).hover(function() {
+        $("#blog2").fadeToggle( "fast", "linear" );
+    });
+    $( "#link3" ).hover(function() {
+        $("#blog3").fadeToggle( "fast", "linear" );
+    });
+    $( "#link4" ).hover(function() {
+        $("#blog4").fadeToggle( "fast", "linear" );
+    });
+    $( "#link5" ).hover(function() {
+        $("#blog5").fadeToggle( "fast", "linear" );
+    });
+    $( "#link6" ).hover(function() {
+        $("#blog6").fadeToggle( "fast", "linear" );
+    });
+    $( "#link7" ).hover(function() {
+        $("#blog7").fadeToggle( "fast", "linear" );
+    });
+    $( "#link8" ).hover(function() {
+        $("#blog8").fadeToggle( "fast", "linear" );
+    });
+</script>
 </html>
